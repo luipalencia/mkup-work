@@ -6,10 +6,12 @@ const toursController = require('./../controllers/toursController')
 router
     .route('/top-5-cheap')
     .get(toursController.aliasTopTours, toursController.getAllTours)
-
 router
     .route('/tours-stats')
     .get(toursController.getTourStats)
+router
+    .route('/monthly-plan/:year')
+    .get(toursController.getMonthlyPlan)
 router
     .route('/')
     .get(toursController.getAllTours)
