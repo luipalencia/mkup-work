@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const tourRouter = require('./routes/toursRoutes')
 const usersRoutes = require('./routes/usersRoutes')
 const AppError = require('./utils/appError')
-const globalErrorHandler = require('./controllers/errorResources')
+const globalErrorHandler = require('./controllers/errorControllers')
 
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
